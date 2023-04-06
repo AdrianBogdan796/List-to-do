@@ -46,9 +46,9 @@ const render = () => {
           <button class="tasks__button tasks__button--toggleDone js-done">
             ${task.done ? "✔" : ""}
           </button>
-          <span class="tasks__name${task.done ? "tasks__name tasks__name--done" : ""}">
-            ${task.content}
-          </span>
+          <span class="tasks__name${task.done ? " tasks__name--done" : ""}">
+          ${task.content}
+        </span>
           <button class="tasks__button tasks__button--remove js-remove">
             🗑
           </button>
@@ -63,15 +63,15 @@ const render = () => {
 const onFormSubmit = (event) => {
   event.preventDefault();
 
-  const newTaskSubject = document.querySelector(".js-newTask");
-  const newTaskContent = newTaskSubject.value.trim();
+  const newTaskElement = document.querySelector(".js-newTask");
+  const newTaskContent = newTaskElement.value.trim();
 
   if (newTaskContent !== "") {
     addNewTask(newTaskContent);
-    newTaskSubject.value = "";
+    newTaskElement.value = "";
   }
 
-  newTaskSubject.focus();
+  newTaskElement.focus();
 };
 
 const init = () => {

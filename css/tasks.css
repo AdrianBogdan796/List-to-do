@@ -52,6 +52,11 @@
 
 .tasks__button--toggleDone {
     background: rgb(26, 122, 32);
+    transition: 1s;
+}
+
+.tasks__button--toggleDone:hover {
+    background: hsl(124, 65%, 40%);
 }
 
 .tasks__button--toggleDone:active {
@@ -67,11 +72,16 @@
 
 .tasks__button--remove {
     background: crimson;
+    transition: 1s;
 }
 
 .tasks__button--remove:active {
     border: 2px solid black;
     border-radius: 2px;
+}
+
+.tasks__button--remove:hover {
+    background: hsl(348, 83%, 60%);
 }
 
 @media (max-width:767px) {

@@ -17,11 +17,17 @@ form {
     color: white;
     border: none;
     padding: 10px 0px;
+    transition: 1s;
 }
 
 .form__button:active {
     border: 2px solid black;
     border-radius: 2px;
+}
+
+.form__button:hover {
+    background: hsl(180, 100%, 35%);
+    transform: scale(1.2);
 }
 
 @media (max-width:767px) {

@@ -1,6 +1,6 @@
 .buttons__button {
     border: none;
-    margin: auto 0;
+    margin: 10px 0 0 0;
     color: hsl(180, 100%, 25%);
     transition: 0.5s;
     cursor: pointer;

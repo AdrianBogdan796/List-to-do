@@ -65,19 +65,18 @@
 
     for (const task of tasks) {
       tasksListHTMLContent += `
-<li class="tasks__item js-task${hideDoneTask && task.done ? " tasks__item--hidden " : ""}"> 
-<button class="tasks__button 
-tasks__button--toggleDone js-toggleDone"> 
-${task.done ? "✔" : ""} 
-</button>
-<span class="tasks__content${task.done ? " tasks__content--done " :
-          ""}">${task.content}</span> 
-<button class="tasks__button 
-tasks__button--remove js-remove">
-🗑
-</button>
-</li>
-  `;
+        <li class="tasks__item js-task${hideDoneTask && task.done ? " tasks__item--hidden " : ""}"> 
+          <button class="tasks__button tasks__button--toggleDone js-toggleDone"> 
+            ${task.done ? "✔" : ""} 
+          </button>
+          <span class="tasks__content${task.done ? " tasks__content--done " : ""}">
+            ${task.content}
+          </span> 
+          <button class="tasks__button tasks__button--remove js-remove">
+            🗑
+          </button>
+        </li>
+      `;
     };
 
     document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
@@ -89,11 +88,11 @@ tasks__button--remove js-remove">
     if (tasks.length !== 0) {
       HTMLButtonString += `
           <button 
-             class="js-hideAllDoneTasks button__button" 
+             class="js-hideAllDoneTasks buttons__button" 
              ${tasks.some(({ done }) => done) ? "" : " disabled"}>
              ${hideDoneTask ? "Pokaż " : "Ukryj "}ukończone
           </button>
-          <button class="js-allTasksDone button__button"
+          <button class="js-allTasksDone buttons__button"
              ${tasks.every(({ done }) => done) ? " disabled" : ""}>
              Ukończ wszystkie
           </button>

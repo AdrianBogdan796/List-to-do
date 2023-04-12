@@ -28,11 +28,12 @@
 
 .section__buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-@media (max-width:767px) {
-    .section__header {
-        grid-template-columns: 1fr;
+@media (max-width: 767px) {
+    .section__buttons {
+        flex-basis: 100%;
+        margin: 10px;
     }
 }

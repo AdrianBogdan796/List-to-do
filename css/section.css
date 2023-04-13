@@ -19,6 +19,9 @@
     padding: 20px;
     font-size: 18px;
     border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .section__title {
